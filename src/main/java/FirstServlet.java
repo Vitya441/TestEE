@@ -21,10 +21,12 @@ public class FirstServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
+		String name = request.getParameter("name");
 		
 		PrintWriter pw = response.getWriter();
+		
 		pw.println("<html>");
-		pw.println("<h1> Hello</h1>");
+		pw.println("<h1> Hello, " + name + "</h1>");
 		pw.println("</html>");
 		
 		
